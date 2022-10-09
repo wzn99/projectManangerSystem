@@ -1,0 +1,14 @@
+
+.button{border:solid 1px #ddd;background:transparent;border-radius:4px;font-size:14px;padding:6px 15px;margin:0;display:inline-block;line-height:20px;transition:all 1s cubic-bezier(0.175, 0.885, 0.32, 1) 0s;}
+.button.bg-main,.button.bg-sub,.button.bg-dot,.button.bg-black,.button.bg-gray,.button.bg-red,.button.bg-yellow,.button.bg-blue,.button.bg-green{color:#fff;}
+
+
+.input{font-size:14px;padding:10px;border:solid 1px #ddd; width:40%;line-height:20px;display:block; border-radius:3px; -webkit-appearance:none;}
+.label{padding-bottom:7px;display:block;line-height:20px; color:#202020;}
+.label label{font-weight:bold;}
+
+.form-group{padding-bottom:20px;}
+.field-icon-right .icon{position:absolute;right:0;top:0;width:34px;height:34px;text-align:center;line-height:34px;font-size:16px;font-weight:normal;}
+
+.bg-main,.border-main .button.active,.pointer.border-main .active,.nav-pills.border-main .active a,.nav-main.border-main .nav-head,.pagination.border-main .active
+{background-color:#0ae;} /*背景-主色*/
