@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/teacher.css">
 <title></title>
 </head>
-<body>
+<body id="page">
 	<div class="content">
 		<div class="center">
 			<div class="projectDescription">
@@ -38,7 +38,7 @@
 				</div>
 				<div class="bottom-right-bottom">
 					<div>
-						<form action="<%=path %>/ReviewSaveServlet" method="post"
+						<form action="<%=path %>/saveReviewServlet" method="post"
 							target="frameName">
 							<br>
 							<br>
@@ -61,11 +61,10 @@
 								style="display: none" id="status"> <br> <br>
 							<div align="center">
 								<input type="submit" class="button bg-main icon-check-square-o"
-									value="暂存" id="temp-button" name="temp"> <input
-									type="submit" class="button bg-main icon-check-square-o"
+									value="暂存" id="temp-button" name="temp">
+								<input type="submit" class="button bg-main icon-check-square-o"
 									value="提交" id="submit-button" name="submit">
 							</div>
-
 						</form>
 						<iframe src="" frameborder="0" name="frameName" height="0px"></iframe>
 					</div>
@@ -107,7 +106,9 @@
 			axios(
 					{
 						method : "get",
-						url : "http://localhost:8080/projectManagerSystem/ReviewTempServlet"
+						//tempReviewServlet
+						//ReviewTempServlet
+						url : "http://localhost:8080/projectManagerSystem/tempReviewServlet"
 								+ url,
 					}).then(function(resp) {
 				let temp_reviews = resp.data;
@@ -121,7 +122,9 @@
 			axios(
 					{
 						method : "get",
-						url : "http://localhost:8080/projectManagerSystem/ReviewProjectServlet"
+						//projectContentServlet
+						//ReviewProjectServlet
+						url : "http://localhost:8080/projectManagerSystem/projectContentServlet"
 								+ url,
 					}).then(function(resp) {
 				let content = resp.data;
@@ -131,7 +134,9 @@
 			axios(
 					{
 						method : "get",
-						url : "http://localhost:8080/projectManagerSystem/ReviewReportServlet"
+						//ReviewReportServlet
+						//reportsServlet
+						url : "http://localhost:8080/projectManagerSystem/reportsServlet"
 								+ url,
 					})
 					.then(
